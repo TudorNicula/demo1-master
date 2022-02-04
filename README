@@ -1,0 +1,50 @@
+CRUD Rest API pentru un "marketplace"
+    Pașii pentru a rula aplicația:
+        1. Pentru a rula aplicația avem nevoie de:
+            1.1.IntelliJ IDEA(pentru a rula aplicația)
+            1.2.pgAdmin 4 v6(pentru a crea baza de date "marketplace")
+            1.3.Postman (pentru a testa funcționalitățile CRUD)
+        2. Rulăm IntelliJ IDEA, din meniul principal selectăm "Git" -> "Clone" .
+            *(daca nu avem deschis un proiect tastam "Get from VCS")
+        3. În fereastra apărută în câmpul "URL" introducem " https://github.com/TudorNicula/demo1-master.git " tastăm "Clone"
+        4. Deschidem pgAdmin 4 v6
+            4.1. Ne logăm
+            4.2. "Servers" -> "PostgresSQL 14"(ne logăm)
+            4.3. Click dreapta "Databases" -> "Create" -> "Database"
+            4.3. Introducem în câmpul "Database" -> "marketplace" -> Save
+        5. Deschidem IntelliJ IDEA
+            5.1. "Ctrl + F9" - Build Project
+            5.2. "Shift + F10" - Run Project
+        Aplicația a fost rulată cu succes! Acum verificăm funcționalitățile!
+        6. Deschidem Postman
+            6.1. "Workspaces" -> "My Workspaces"
+            6.2. Testăm "GET" introducând "http://localhost:8080/products" în câmpul Enter request URL -> SEND
+                Postman va afișa în câmpul body:
+                 "[
+                      {
+                          "id": 1,
+                          "title": "SmartPhone",
+                          "description": "iPhone 12 Pro Max, 128GB",
+                          "price": 20000
+                      },
+                      {
+                          "id": 2,
+                          "title": "Phone",
+                          "description": "Nokia 6300, 128MB",
+                          "price": 1300
+                      },
+                      {
+                          "id": 4,
+                          "title": "Automobil",
+                          "description": "BMW X5",
+                          "price": 360000
+                      }
+                  ]"
+                 *Așa verificăm metoda getProducts, afișează toate produsele eistente
+            6.3. Testăm "POST" introducând "http://localhost:8080/products" în câmpul Enter request URL
+             -> Body -> raw -> Text -> JSON -> introducem {
+                                                           "title": "Numele produsului dorit",
+                                                           "description": "Descrierea produsului",
+                                                           "price": "Pretul produsului"
+                                                          } -> "SEND"
+             ... tot așa facem cu "PUT" și "DELETE"
