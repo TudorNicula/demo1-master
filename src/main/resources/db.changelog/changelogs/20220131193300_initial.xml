@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet dbms="postgresql" author="nicula.tudor" id="20220201105800__create_tables">
+        <createTable tableName="user">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_user"/>
+            </column>
+            <column name="username" type="varchar(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="varchar(60)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="product">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_product"/>
+            </column>
+            <column name="title" type="varchar(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+        <createTable tableName="user_product">
+            <column name="user_id" type="bigint" autoIncrement="true">
+                <constraints nullable="false" foreignKeyName="fk_user_id" references="user(id)"/>
+            </column>
+            <column name="product_id" type="bigint" autoIncrement="true">
+                <constraints nullable="false" foreignKeyName="fk_product_id" references="product(id)"/>
+            </column>
+        </createTable>
+
+
+    </changeSet>
+
+    <changeSet dbms="postgresql" author="nicula.tudor" id="20220201105900__populate_table_user">
+
+        <insert tableName="user">
+            <column name="username" value="tudornicula"/>
+            <column name="email" value="tudor.nicula@gmail.com"/>
+            <column name="password" value="abcdefg"/>
+        </insert>
+
+        <insert tableName="user">
+            <column name="username" value="sandunicula"/>
+            <column name="email" value="sandu.nicula@gmail.com"/>
+            <column name="password" value="123456789"/>
+        </insert>
+
+    </changeSet>
+
+    <changeSet dbms="postgresql" author="nicula.tudor" id="20220201120300__populate_table_product">
+
+        <insert tableName="product">
+            <column name="title" value="SmartPhone"/>
+            <column name="description" value="iPhone 12 Pro Max, 128GB"/>
+            <column name="price" value="20000"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="Phone"/>
+            <column name="description" value="Nokia 6300, 128MB"/>
+            <column name="price" value="1300"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
