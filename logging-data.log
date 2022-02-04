@@ -3442,3 +3442,33 @@ org.springframework.dao.EmptyResultDataAccessException: No class com.example.dem
 2022-02-03 21:06:58.858  INFO 15296 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-02-03 21:06:58.859  INFO 15296 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-02-03 21:06:58.862  INFO 15296 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-04 10:27:16.164  INFO 10528 --- [main] com.example.demo.Demo1Application        : Starting Demo1Application using Java 16.0.1 on Tudor with PID 10528 (C:\Users\Tudor\Desktop\demo1-master\target\classes started by Tudor in C:\Users\Tudor\Desktop\demo1-master)
+2022-02-04 10:27:16.170  INFO 10528 --- [main] com.example.demo.Demo1Application        : No active profile set, falling back to default profiles: default
+2022-02-04 10:27:16.835  INFO 10528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-04 10:27:16.882  INFO 10528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2022-02-04 10:27:17.306  INFO 10528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-04 10:27:17.314  INFO 10528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-04 10:27:17.314  INFO 10528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-04 10:27:17.393  INFO 10528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-04 10:27:17.394  INFO 10528 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1164 ms
+2022-02-04 10:27:17.577  INFO 10528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-04 10:27:17.734  INFO 10528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-04 10:27:17.876  INFO 10528 --- [main] liquibase.database                       : Set default schema name to public
+2022-02-04 10:27:17.958  INFO 10528 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2022-02-04 10:27:18.360  INFO 10528 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2022-02-04 10:27:18.392  INFO 10528 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2022-02-04 10:27:18.447  INFO 10528 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-04 10:27:18.493  INFO 10528 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-02-04 10:27:18.621  INFO 10528 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-04 10:27:18.720  INFO 10528 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-02-04 10:27:19.210  INFO 10528 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-04 10:27:19.217  INFO 10528 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-04 10:27:19.646  INFO 10528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-04 10:27:19.653  INFO 10528 --- [main] com.example.demo.Demo1Application        : Started Demo1Application in 3.856 seconds (JVM running for 4.655)
+2022-02-04 10:27:21.616  INFO 10528 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-04 10:27:21.617  INFO 10528 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-04 10:27:21.619  INFO 10528 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-04 10:27:21.637  INFO 10528 --- [http-nio-8080-exec-2] c.e.demo.controller.ProductController    : Retrieved all products
+2022-02-04 10:37:17.654  INFO 10528 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-04 10:37:17.656  INFO 10528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-04 10:37:17.659  INFO 10528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
